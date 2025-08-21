@@ -1,0 +1,10 @@
+[package]
+name = "quantx-ml"
+authors = ["nubiv <h.horace0921@gmail.com>"]
+license = "MIT"
+description = "quantx-ml"
+repository = "https://github.com/nubiv/quantx-ml"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
