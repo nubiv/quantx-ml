@@ -8,3 +8,33 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+# Core
+quantx-core = { path = "../quantx-core" }
+
+# ML
+polars = "0.49"
+candle-core = "0.9"
+candle-nn = "0.9"
+candle-optimisers = "0.9"
+
+# Data Struct
+rust_decimal = "1.37"
+rust_decimal_macros = "1.37"
+
+# Tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+tracing-appender = "0.2.3"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Error
+thiserror = "2.0"
+
+# Misc
+chrono = { version = "0.4", features = ["serde"] }
+rand = "0.9"
+charming = "0.6"
+derive_more = { version = "2.0", features = ["display", "constructor"] }
