@@ -17,6 +17,12 @@ candle-core = "0.9"
 candle-nn = "0.9"
 candle-optimisers = "0.9"
 
+linfa = "0.7"
+nalgebra = "0.34"
+luminal = "0.2"
+ndarray = "0.16"
+peroxide = "0.40"
+
 # Data Struct
 rust_decimal = "1.37"
 rust_decimal_macros = "1.37"
