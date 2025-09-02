@@ -3,13 +3,13 @@ use std::hint::black_box;
 use criterion::{BenchmarkId, Criterion, Throughput, criterion_group, criterion_main};
 use polars::prelude::*;
 
-mod util;
+mod utils;
 
 #[cfg(target_arch = "aarch64")]
-use util::neon_mul;
+use utils::neon_mul;
 #[cfg(any(target_arch = "x86", target_arch = "x86_64"))]
-use util::{avx2_mul, sse_mul};
-use util::{gen_input, scalar_mul};
+use utils::{avx2_mul, sse_mul};
+use utils::{gen_input, scalar_mul};
 
 fn bench_all(c: &mut Criterion) {
     let mut g = c.benchmark_group("scalar_vs_simd_vs_polars");

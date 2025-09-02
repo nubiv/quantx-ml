@@ -1,3 +1,10 @@
+// Here deterministic synthetic data is ideal: no noise, repeatable, comparable.
+pub fn gen_input(len: usize) -> (Vec<f32>, Vec<f32>) {
+    let a: Vec<f32> = (0..len).map(|i| 8.1239412 + (i as f32) * 0.001).collect();
+    let b: Vec<f32> = (0..len).map(|i| 9.0003 + (i as f32) * 0.002).collect();
+    (a, b)
+}
+
 pub fn scalar_mul(a: &[f32], b: &[f32]) -> Vec<f32> {
     assert_eq!(a.len(), b.len());
     let mut out = Vec::with_capacity(a.len());
@@ -5,12 +12,6 @@ pub fn scalar_mul(a: &[f32], b: &[f32]) -> Vec<f32> {
         out.push(a[i] * b[i]);
     }
     out
-}
-
-pub fn gen_input(len: usize) -> (Vec<f32>, Vec<f32>) {
-    let a: Vec<f32> = (0..len).map(|i| 8.1239412 + (i as f32) * 0.001).collect();
-    let b: Vec<f32> = (0..len).map(|i| 9.0003 + (i as f32) * 0.002).collect();
-    (a, b)
 }
 
 // ---------------- x86 paths (Intel mac or Linux/Windows on x86_64) ----------------
